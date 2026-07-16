@@ -1,0 +1,39 @@
+<p>employee works!</p>
+@if(Logged){
+    <p>Welcome to Angular!</p>
+}
+@else {
+    <p>Please Login!</p>
+}
+<hr>
+<input type="text" (input)="checkLength()" [(ngModel)]="username" placeholder="Enter the username"/><br/>
+@if(check){
+<span  [style.color]="'red'">{{message}}</span>
+}@else{
+    <span [style.color]="'black'">{{message}}</span>
+}
+<hr/>
+<h3>Employee Details!</h3>
+@for(emp of employeeDetails;track emp.ename){
+    <ul>
+        <li>{{emp.ename}}-{{emp.age}}-{{emp.salary | currency:"INR"}}</li>
+    </ul>
+}
+<hr/>
+@for(emp of employeeDetails;track emp.ename){
+  
+    <ol>
+        <li>{{emp.ename}}</li>
+        <li>{{emp.age}}</li>
+        <li>{{emp.salary}}</li>
+    </ol>
+    
+}
+<hr/>
+
+<input type="checkbox" (change)="CheckBox()" [(ngModel)]="cliqed"/>I Agree
+<button [disabled]="!cliqed">Submit</button>
+<hr/>
+<button (click)="display('Angular')" >Events</button>
+<p> {{manage}}</p>
+<hr/>

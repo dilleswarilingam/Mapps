@@ -1,0 +1,39 @@
+<h3>student Details!</h3>
+<p>{{fname}}-{{myage}}</p>
+<hr>
+<img [src]="picture" >
+<hr>
+<div>
+    <label>Enter your Name:</label>
+    <input type="text" [(ngModel)]="username">
+    <p>Name:{{username}}</p>
+</div>
+<hr>
+<button (mouseover)="showContent()" (mouseout)="hideContent()">Click me</button>
+<p>{{content}}</p>
+
+<hr/>
+@if(checked){
+<button (click)="changeColor()" [ngStyle]="{'color':'white','background':'blue'}">changeColor</button>
+}@else {
+    <button (click)="changeColor()" [ngStyle]="{'color':'white','background':'green'}">changeColor</button>
+}
+<hr/>
+<h3>Student Grades!</h3>
+@for(student of students;track student.sname){
+    @if(student.marks>35){
+        <ul>
+        <li>{{student.sname}}-{{student.marks}}-<b id="pass">Pass</b></li>
+        </ul>
+    }@else {
+        <ul>
+        <li>{{student.sname}}-{{student.marks}}-<b id="fail">Fail</b></li>
+        </ul>
+    }
+}
+<hr/>
+<h3>Today Date</h3>
+<p>FullDate: {{today | date:'fullDate'}}</p>
+<p>ShortDate: {{today | date:'shortDate'}}</p>
+<p>Date: {{today | date:'fullDate' | uppercase}}</p>
+<hr/>
