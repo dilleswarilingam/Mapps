@@ -1,0 +1,25 @@
+.completed {
+    color: #90EE90;
+    font-weight: bold; 
+    
+}
+
+.pending {
+    color: hsl(39, 97%, 64%);
+    font-weight: bold; 
+}
+
+.rejected {
+    color: red;
+    font-weight: bold; 
+}
+
+.complete{
+    color:black;
+    font-weight: bold;
+}
+
+.notcomplete{
+    color:darkgray;
+    font-weight: bold;
+}
