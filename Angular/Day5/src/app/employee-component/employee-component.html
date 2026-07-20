@@ -1,0 +1,44 @@
+<h3>Servies and dependancy Injection</h3>
+<button (click)="service.inc()">Increment</button>
+<button (click)="service.dec()">Decrement</button>
+<button (click)="service.reset()">Reset</button>
+<p>Count: {{service.num}}</p>
+
+
+<h2>Employee List</h2>
+
+<select [(ngModel)]="selectedStatus">
+
+  <option value="All">All</option>
+  <option value="Completed">Completed</option>
+  <option value="Pending">Pending</option>
+  <option value="Rejected">Rejected</option>
+
+</select>
+
+<br><br>
+
+<table border="1" cellpadding="10">
+
+  <tr >
+    <th >Employee Roll</th>
+    <th >Name</th>
+    <th >Status</th>
+    <th >Disabled</th>
+  </tr>
+
+  <tr *ngFor="let emp of filteredEmployees"  
+    [ngClass]="{
+        'completed': emp.status === 'Completed',
+        'pending': emp.status === 'Pending',
+        'rejected': emp.status === 'Rejected'
+      }">
+
+    <td>{{emp.empRoll}}</td>
+    <td>{{emp.name}}</td>
+    <td>{{emp.status}}</td>
+    <td [ngClass]="{'complete':emp.disabled===true,'notcomplete':emp.disabled===false}">{{emp.disabled}}</td>
+
+  </tr>
+
+</table>

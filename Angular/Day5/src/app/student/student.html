@@ -1,0 +1,20 @@
+<h3>student Component!</h3>
+<ul >
+    <li *ngFor="let student of students">{{student | test:wish}}</li>
+    
+</ul>
+
+<ul>
+    <li *ngFor="let student of students">{{student.name |capitalize}}</li>
+</ul>
+
+<form #f="ngForm"  (ngSubmit)="save()" >
+    <input type="text" name="name" required minlength="3" [(ngModel)]="products.name"  placeholder="Enter your name" #n="ngModel"/><br/>
+    <input type="number" name="age" [(ngModel)]="products.age" /><br/>
+    <button type="submit" [disabled]="f.invalid">Submit</button>
+    <p *ngIf="n.invalid && n.touched">Invalid Details!</p>
+</form>
+<p>Form Valid: {{ f.valid }}</p>
+<p>Name Valid: {{ n.valid }}</p>
+<p>Touched: {{ n.touched }}</p>
+<p>Errors: {{ n.errors | json }}</p>
