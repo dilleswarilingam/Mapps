@@ -1,0 +1,42 @@
+body{
+    font-family: Arial;
+}
+
+form{
+    width:350px;
+    margin:auto;
+    border: black;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+}
+
+button{
+    margin-right:10px;
+    padding:8px 15px;
+}
+
+div{
+    color:red;
+    font-size:12px;
+}
+
+h3{
+    text-align: center;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 6px;
+}

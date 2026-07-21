@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h3>Registration Form </h3>
+    <form [formGroup]="regForm" (ngSubmit)="onSubmit()">
+      <label>Name:</label><br>
+      <input type="text" formControlName="name">
+      <div *ngIf="regForm.get('name')?.invalid && regForm.get('name')?.touched">
+        <span [style.color]="'red'">please enter name</span>
+      </div>
+      <br><br>
+
+      <label>Email:</label><br>
+      <input type="text" formControlName="email">
+      <div *ngIf="regForm.get('email')?.invalid && regForm.get('email')?.touched">
+        <span [style.color]="'red'">Invalid Email!</span>
+      </div>
+      <br><br>
+
+      <label>Password:</label><br>
+      <input type="password" formControlName="password">
+      <div *ngIf="regForm.get('password')?.invalid && regForm.get('password')?.touched">
+        <span [style.color]="'red'">Password must be more than 8 characters!</span>
+      </div>
+      <br><br>
+
+      <label>Gender:</label><br>
+      <label><input type="radio" value="Male" formControlName="gender">Male</label>
+      <label><input type="radio" value="Female" formControlName="gender">Female</label>
+      <label><input type="radio" value="Others" formControlName="gender">Others</label>
+      <div *ngIf="regForm.get('gender')?.invalid && regForm.get('gender')?.touched">
+        <span [style.color]="'red'">please select gender!</span>
+      </div>
+      <br><br>
+
+      <label>Address:</label><br>
+      <textarea col="30" rows="3" formControlName="address"></textarea>
+      <div *ngIf="regForm.get('address')?.invalid && regForm.get('address')?.touched">
+        <span [style.color]="'red'">Address is mandatory!</span>
+      </div>
+      <br><br>
+
+      <label>Country:</label><br>
+      <select formControlName="country">
+        <option value="">Select country</option>
+        <option>INDIA</option>
+        <option>USA</option>
+        <option>UK</option>
+        <option>GERMANY</option>
+      </select><br><br>
+
+      <label>Date of Birth:</label><br>
+      <input type="date" formControlName="dob">
+      <div *ngIf="regForm.get('dob')?.invalid && regForm.get('dob')?.touched">
+        <span [style.color]="'red'">Please Enter Date of Birth!</span>
+      </div>
+      <br><br>
+
+      <label><input type="checkbox" formControlName="terms">I accept terms & Conditions</label><br><br>
+
+      <button type="submit" [disabled]="regForm.invalid">Login</button>
+      <button (click)="reset()">Reset</button>
+    </form>
+  </body>
+</html>
