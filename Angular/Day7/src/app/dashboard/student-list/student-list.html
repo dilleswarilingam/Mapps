@@ -1,0 +1,23 @@
+<h3>Students Details!</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Class</th>
+            <th>Department</th>
+            <th>Marks</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{student.name}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.class}}</td>
+            <td>{{student.department}}</td>
+            <td>{{student.marks}}</td>
+            <td>{{student.gender}}</td>
+        </tr>
+    </tbody>
+</table>

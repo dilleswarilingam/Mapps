@@ -1,0 +1,68 @@
+<h3>Add Student Details</h3>
+<form [formGroup]="loginform" (ngSubmit)="saveData()">
+    <label>Name:</label><br>
+    <input type="text" formControlName="name">
+    <div *ngIf="loginform.get('name')?.invalid && loginform.get('name')?.touched">
+        <span>Please enter name!</span>
+    </div>
+    <br><br>
+
+    <label>Email:</label><br>
+    <input type="text" formControlName="email">
+    <div *ngIf="loginform.get('email')?.invalid && loginform.get('email')?.touched">
+        <span>Please enter email!</span>
+    </div>
+    <br><br>
+
+    <label>Btech</label><br>
+    <select formControlName="class">
+        <option value="">Select</option>
+        <option>1st Year</option>
+        <option>2nd Year</option>
+        <option>3rd Year</option>
+        <option>4th Year</option>
+    </select>
+    <div *ngIf="loginform.get('class')?.invalid && loginform.get('class')?.touched">
+        <span>Please mention year!</span>
+    </div>
+    <br><br>
+
+    <label>Department</label><br>
+    <select formControlName="department">
+        <option value="">Select</option>
+        <option>CSE</option>
+        <option>AI&DS</option>
+        <option>MECH</option>
+        <option>ECE</option>
+        <option>EEE</option>
+    </select>
+    <div *ngIf="loginform.get('department')?.invalid && loginform.get('department')?.touched">
+        <span>Please select department!</span>
+    </div>
+    <br><br>
+
+    <label>CGPA</label><br>
+    <input type="number" formControlName="marks">
+    <div *ngIf="loginform.get('marks')?.invalid && loginform.get('marks')?.touched">
+        <span>Please enter CGPA!</span>
+    </div>
+    <br><br>
+
+    <label>Gender:</label>
+    <label>
+        <input type="radio" name="gender" value="male" formControlName="gender">Male
+    </label>
+    <label>
+        <input type="radio" name="gender" value="female" formControlName="gender">Female
+    </label>
+    <label>
+        <input type="radio" name="gender" value="others" formControlName="gender">Others
+    </label>
+    <div *ngIf="loginform.get('gender')?.invalid && loginform.get('gender')?.touched">
+        <span>Select gender!</span>
+    </div>
+    <br><br>
+
+    <button type="submit" >Save</button>
+    <button type="button" (click)="Reset()">Reset</button>
+</form>
