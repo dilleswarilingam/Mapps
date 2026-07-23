@@ -1,0 +1,12 @@
+.student-box{
+    width:300px;
+    padding:20px;
+    margin:20px;
+    border:2px solid black;
+    border-radius:10px;
+    background-color:#f5f5f5;
+}
+
+.student-box p{
+    font-size:16px;
+}

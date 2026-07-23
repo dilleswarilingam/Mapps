@@ -1,0 +1,42 @@
+<h3>Students Details!</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Btech</th>
+            <th>Department</th>
+            <th>Marks</th>
+            <th>Gender</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{student.id}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.email}}</td>
+            <td>{{student.class}}</td>
+            <td>{{student.department}}</td>
+            <td>{{student.marks}}</td>
+            <td>{{student.gender}}</td>
+            <td>
+                <button type="button" (click)="deleteStudent(student.id)">
+                    Delete
+                </button>
+
+                <a [routerLink]="['/dashboard/details',student.id]">
+                    View
+                </a>
+
+                <a [routerLink]="['/dashboard/edit',student.id]">
+                    Edit
+                </a>                
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div *ngIf="students.length==0">
+    <h3>No Students Found</h3>
+</div>
