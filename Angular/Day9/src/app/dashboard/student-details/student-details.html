@@ -1,0 +1,12 @@
+<div class="student-box" *ngIf="student">
+    <p><b>ID:</b>{{student.id}}</p>
+    <p><b>Name:</b>{{student.name}}</p>
+    <p><b>Email:</b>{{student.email}}</p>
+    <p><b>Btech:</b>{{student.class}}</p>
+    <p><b>Department</b>{{student.department}}</p>
+    <p><b>Marks:</b>{{student.marks}}</p>
+    <p><b>Gender:</b>{{student.gender}}</p>
+</div>
+<div *ngIf="!student">
+   <h3> No student Found!</h3>
+</div>

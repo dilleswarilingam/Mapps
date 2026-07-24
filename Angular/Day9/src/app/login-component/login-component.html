@@ -1,0 +1,16 @@
+<h2>Login Form</h2>
+<form [formGroup]="loginform" (ngSubmit)="submit()">
+    <div>
+        <label>Username:</label>
+        <input type="text" formControlName="username" placeholder="Enter Username">
+    </div>
+    <br><br>
+    <div>
+        <label>Password:</label>
+        <input type="password" formControlName="password">
+    </div>
+    <br><br>
+    <button type="submit">Login</button>
+
+</form>
+<router-outlet></router-outlet>
