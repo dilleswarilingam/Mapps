@@ -1,0 +1,103 @@
+.dashboard {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 20px;
+
+    background: #f5f6fa;
+
+    min-height: 100vh;
+
+}
+
+
+/* Common Card Design */
+
+.timezones,
+.help,
+.events,
+.artifact {
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+
+/* First Row */
+
+.timezones {
+
+    width: 100%;
+
+    min-height: 150px;
+
+}
+
+
+/* Second Row */
+
+.help-events {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+
+.help {
+
+    flex: 1;
+
+    min-height: 300px;
+
+}
+
+
+.events {
+
+    flex: 1;
+
+    min-height: 300px;
+
+}
+
+
+/* Third Row */
+
+.artifact {
+
+    width: 100%;
+
+    min-height: 220px;
+
+}
+
+
+/* Heading */
+
+.dashboard h3 {
+
+    margin: 0 0 15px;
+
+    font-size: 22px;
+
+    color: #2d3748;
+
+    border-bottom: 2px solid #1e90ff;
+
+    display: inline-block;
+
+    padding-bottom: 5px;
+
+}
