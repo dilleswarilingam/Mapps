@@ -1,0 +1,28 @@
+<div class="leaves">
+    <div class="heading">
+        <div class="start-date">
+            <label>START DATE</label>
+            <input type="text" placeholder="mm/dd/yyyy">
+        </div>
+        <div class="end-date">
+            <label>END DATE</label>
+            <input type="text" placeholder="mm/dd/yyyy">
+        </div>
+        <div class="status">
+            <label>STATUS</label>
+            <select>
+                <option *ngFor="let message of status">{{message}}</option>
+            </select>
+        </div>
+        <div class="search">
+            <button>SEARCH</button>
+        </div>
+        <div class="request">
+            <button>REQUEST</button>
+        </div>
+    </div>
+    <div class="image">
+        <img src="https://hubble.miraclesoft.com/assets/img/no-results.png" alt="image">
+        <p>Sorry,we weren't able to find any leaves</p>
+    </div>
+</div>

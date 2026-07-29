@@ -1,0 +1,42 @@
+.calendar-page{
+    display:flex;
+    gap:25px;
+    padding:20px;
+    background:#f3f5f7;
+    height:100%;
+}
+
+.calendar-left{
+    flex:3;
+    background:white;
+    padding:20px;
+}
+
+.calendar-right{
+    flex:1;
+}
+
+.calendar-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.panel{
+    color:white;
+    padding:20px;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+.black{
+    background:#252525;
+}
+
+.blue{
+    background:#2f6ea5;
+}
+
+.red{
+    background:#ef3b44;
+}
