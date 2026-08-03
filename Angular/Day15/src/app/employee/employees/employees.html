@@ -1,0 +1,91 @@
+<div class="employee">
+    <div class="image">
+        
+        <div *ngIf="!isSearched" class="placeholder">
+            <img src="https://hubble.miraclesoft.com/assets/img/no-results.png"
+             alt="No Employee Found">
+
+            <p class="paragraph">Search for any Miraclite and view their profile</p>
+            <p class="paragraph"><i>Please apply the required filter and search</i></p>
+        </div>
+
+        <table *ngIf="isSearched && filteredEmployees.length > 0"
+           class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Department</th>
+                    <th>Work Location</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let emp of filteredEmployees">
+                    <td>{{ emp.id }}</td>
+                    <td>{{ emp.name}}</td>
+                    <td>{{ emp.email }}</td>
+                    <td>{{ emp.mobile }}</td>
+                    <td>{{ emp.department }}</td>
+                    <td>{{ emp.workLocation }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    
+        <div *ngIf="isSearched && filteredEmployees.length === 0"
+         class="text-center mt-5">
+
+            <img src="https://hubble.miraclesoft.com/assets/img/no-results.png"
+             alt="No Employee Found">
+
+            <p class="paragraph">No Employee Found</p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="employee-card">
+        <div class="search-section">
+            <label>EMPLOYEE SEARCH</label>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    [(ngModel)]="searchText"
+                    placeholder="Search by Name">
+                <button class="search" (click)="search()"> 🔍 </button>
+            </div>
+        </div>
+
+        <h3>Filter By</h3>
+
+        <div class="field">
+            <label>DEPARTMENT</label>
+
+            <select [(ngModel)]="searchDepartment" (change)="filterByDepartment()">
+                <option value="">Select Option</option>
+                <option value="Development">Development</option>
+                <option value="Testing">Testing</option>
+                <option value="HR">HR</option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>WORK LOCATION</label>
+
+            <select [(ngModel)]="searchWork" (change)="filterByWorkPlace()">
+                <option value="">Select Option</option>
+                <option value="Visakhapatnam">Visakhapatnam</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Bangalore">Bangalore</option>
+            </select>
+        </div>
+
+    </div>
+</div>
