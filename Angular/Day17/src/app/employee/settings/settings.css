@@ -1,0 +1,86 @@
+
+.appraisal {
+    background: #f5f6fa;
+    padding: 20px;
+    min-height: 40vh;
+}
+
+
+.appraisal {
+    border: 1px solid #e5e5e5;
+    background: #fff;
+}
+
+.para {
+    display: inline-block;
+    padding: 25px 20px 10px 20px;
+}
+
+.para p:first-child {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.para p:last-child {
+    font-size: 16px;
+    color: #444;
+}
+
+
+.butn {
+    float: right;
+    margin: 25px 20px 0 0;
+    background: #11a4e3;
+    color: white;
+    padding: 14px 22px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.second-part {
+    clear: both;
+    padding: 0 20px 20px;
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.table thead th {
+    font-size: 12px;
+    color: #9b9b9b;
+    font-weight: 600;
+    text-align: center;
+    padding: 18px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+.table tbody td {
+    text-align: center;
+    padding: 22px;
+    font-size: 15px;
+    color: #444;
+    border-bottom: 1px solid #ececec;
+}
+
+
+.table tbody tr:hover {
+    background: #f8fbff;
+}
+
+
+.status {
+    background: #165a9c;
+    color: white;
+    padding: 6px 18px;
+    font-size: 13px;
+    border-radius: 2px;
+    display: inline-block;
+}

@@ -1,0 +1,57 @@
+<div class="timesheet">
+    <div class="time-sheet-heading">
+        <div class="year">
+            <label>YEAR</label>
+            <select>
+                <option>All</option>
+                <option selected>2026</option>
+                <option>2025</option>
+                <option>2024</option>
+            </select>
+        </div>
+        <div class="month">
+            <label>MONTH</label>
+            <select>
+                <option *ngFor="let month of months">{{month}}</option>
+            </select>
+        </div>
+        <div class="week">
+            <label>WEEK</label>
+            <select>
+                <option>All</option>
+            </select>
+        </div>
+        <div class="status">
+            <label>STATUS</label>
+            <select>
+                <option *ngFor="let message of status">{{message}}</option>
+            </select>
+        </div>
+        <div class="search">
+            <button>SEARCH</button>
+        </div>
+        <div class="add">
+            <button>ADD</button>
+        </div>
+    </div>
+    <div class="time-sheet-data">
+        <table class="table">
+            <thead class="table-head">
+                <tr>
+                    <th *ngFor="let heading of headings">{{heading}}</th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+                <tr *ngFor="let data of timesheets">
+                    <td>{{data.startDate}}</td>
+                    <td>{{data.endDate}}</td>
+                    <td>{{data.totalHours}}</td>
+                    <td>{{data.submittedDate}}</td>
+                    <td [ngClass]="{'submitted':data.status==='Submitted','rejected':data.status==='Rejected','approved':data.status==='Approved','draft':data.status==='Draft'}">
+                        {{data.status}}</td>
+                    <td>{{data.approvedDate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

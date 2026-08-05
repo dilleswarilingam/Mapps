@@ -1,0 +1,29 @@
+import { HttpInterceptorFn } from '@angular/common/http';
+import { catchError, throwError } from 'rxjs';
+
+export const errorInterceptor: HttpInterceptorFn = (req, next) => {
+
+  return next(req).pipe(
+    catchError((error) => {
+      if (error.status === 401) {
+        alert("Unauthorized User");
+      }
+      else if (error.status === 403) {
+        alert("Access Denied");
+      }
+      else if (error.status === 404) {
+        alert("Data Not Found");
+      }
+      else if (error.status === 500) {
+        alert("Internal Server Error");
+      }
+      else {
+        alert("Something went wrong");
+      }
+      return throwError(() => error);
+
+    })
+
+  );
+
+};
