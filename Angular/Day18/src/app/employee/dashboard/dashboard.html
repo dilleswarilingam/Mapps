@@ -1,0 +1,74 @@
+<div class="dashboard">
+    <div class="timezones">
+        <h3>TimeZones</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let time of timezone">
+                        <td>{{time.country}}</td>
+                        <td>{{time.time}}</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    <div class="help-events">
+        <div class="help">
+            <h3>Helpdesk</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Issue</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let help of helpdesk">
+                        <td>{{help.id}}</td>
+                        <td>{{help.issue}}</td>
+                        <td>{{help.status}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="events">
+            <h3>Upcoming Events</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let event of events">
+                        <td>{{event.date}}</td>
+                        <td>{{event.event}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="artifact">
+        <h3>Latest Artifacts</h3>
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of artifacts">
+                        <td>{{item.name}}</td>
+                        <td>{{item.date}}</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</div>
