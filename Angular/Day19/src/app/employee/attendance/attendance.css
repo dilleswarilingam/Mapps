@@ -1,0 +1,124 @@
+
+.timesheet {
+    padding: 20px;
+    background: #f5f6fa;
+    min-height: 100vh;
+}
+
+
+.time-sheet-heading {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 20px;
+}
+
+
+.year,
+.month,
+.week,
+.status {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.time-sheet-heading label {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.time-sheet-heading select {
+    height: 55px;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-size: 14px;
+    outline: none;
+    font-weight: 500;
+}
+
+
+.search,
+.add {
+    flex: 1;
+}
+
+.search button,
+.add button {
+    width: 100%;
+    height: 56px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.search button {
+    background: #18a8e1;
+}
+
+.search button:hover {
+    background: #1494c8;
+}
+
+.add button {
+    background: #173d68;
+}
+
+.add button:hover {
+    background: #123152;
+}
+
+
+.time-sheet-data {
+    background: white;
+    border: 1px solid #e6e6e6;
+    padding: 18px;
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead th {
+    font-size: 12px;
+    color: #9a9a9a;
+    font-weight: 600;
+    text-align: center;
+    padding: 18px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.table tbody td {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #ececec;
+    color: #444;
+    font-size: 15px;
+}
+
+.table tbody tr:hover {
+    background: #f8fbff;
+}
+
+.submitted{
+    color:green !important;
+}
+.rejected{
+    color:red !important;
+}
+.approved{
+    color:green !important;
+}
+.draft{
+    color:orange !important;
+}
